@@ -438,13 +438,13 @@ const Header = () => {
                             </ArrowIconSpan>
                         </Item>
                         <Item>
-                            <Link target="#" href="https://github.com/Igor178">
-                                <a>milad</a>
+                            <Link target="#" href="https://www.wikinemad.ir">
+                                <a>Contact</a>
                             </Link>
                         </Item>
                         <Item>
-                            <Link target="#" href="https://github.com/Igor178">
-                                <a>sajad</a>
+                            <Link target="#" href="https://www.wikinemad.ir">
+                                <a>Help</a>
                             </Link>
                         </Item>
                     </OverlayMenu>

@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <Title>
-        سلام میلاد
+        Hello World
       </Title>
     </div>
   );
