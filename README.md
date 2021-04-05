@@ -1,7 +1,7 @@
 
 
-# Responsiv Hamburger Menu with transition
-## with styled-components
+# Responsive Hamburger Menu with transition
+
 
 
 ## [Demo](https://606b39bdc6aff1000bcff7dd--pensive-jennings-b738b4.netlify.app/)
