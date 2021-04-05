@@ -32,8 +32,7 @@ const Logo = styled.h1`
 
     :hover {
     color: #f2c2cf;
-  }
-    
+  }   
 `;
 
 
