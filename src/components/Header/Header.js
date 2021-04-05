@@ -193,8 +193,9 @@ const SubOverlayMenu = styled.ul`
         transition: margin-left 0.6s ease-out;
     }
   }
-  a{
+  p{
     padding-right: 0.5rem;
+    padding-left:0.3rem;
   }
 `;
 
@@ -234,7 +235,7 @@ const SubLink = styled.div`
     transform: scaleX(0);
     transition: transform 0.4s linear;
   }
-  a{
+  p{
     margin-top:0.3rem
   }
   }
@@ -306,19 +307,19 @@ const Header = () => {
                     <OverlayMenu open={toggle}>
                         <Item>
                             <Link target="#" href="https://www.wikinemad.ir">
-                                <a>Instagram</a>
+                                <p>Instagram</p>
                             </Link>
                         </Item>
                         <Item>
                             <Link target="#" href="https://www.wikinemad.ir">
-                                <a>Behance</a>
+                                <p>Behance</p>
                             </Link>
                         </Item>
                         <Item onClick={() => setSubToggle(!subToggle)}>
 
                             <Link>
 
-                                <a>Github</a>
+                                <p>Github</p>
 
                                 <SubOverlay open={subToggle}>
                                     <SubOverlayMenu open={subToggle}>
@@ -326,15 +327,15 @@ const Header = () => {
                                             <SubLink target="#" href="https://www.wikinemad.ir">
                                                 <SubIcon><FcGoogle /></SubIcon>
                                                 <div>
-                                                    <a>Google</a>
-                                                    <a>CEO</a>
+                                                    <p>Google</p>
+                                                    <p>CEO</p>
                                                 </div>
                                             </SubLink>
                                             <SubLink target="#" href="https://www.wikinemad.ir">
                                                 <SubIcon><FcLeave /></SubIcon>
                                                 <div>
-                                                    <a>Calender</a>
-                                                    <a>Date</a>
+                                                    <p>Calender</p>
+                                                    <p>Date</p>
                                                 </div>
                                             </SubLink>
                                         </SubItem>
@@ -342,15 +343,15 @@ const Header = () => {
                                             <SubLink target="#" href="https://www.wikinemad.ir">
                                                 <SubIcon><FcAndroidOs /></SubIcon>
                                                 <div>
-                                                    <a>Android</a>
-                                                    <a>Development</a>
+                                                    <p>Android</p>
+                                                    <p>Development</p>
                                                 </div>
                                             </SubLink>
                                             <SubLink target="#" href="https://www.wikinemad.ir">
                                                 <SubIcon><FcPhoneAndroid /></SubIcon>
                                                 <div>
-                                                    <a>Phone</a>
-                                                    <a>Repairment</a>
+                                                    <p>Phone</p>
+                                                    <p>Repairment</p>
                                                 </div>
                                             </SubLink>
                                         </SubItem>
@@ -358,15 +359,15 @@ const Header = () => {
                                             <SubLink target="#" href="https://www.wikinemad.ir">
                                                 <SubIcon><FcMultipleCameras /></SubIcon>
                                                 <div>
-                                                    <a>Photogeraf</a>
-                                                    <a>Design</a>
+                                                    <p>Photogeraf</p>
+                                                    <p>Design</p>
                                                 </div>
                                             </SubLink>
                                             <SubLink target="#" href="https://www.wikinemad.ir">
                                                 <SubIcon><FcShipped /></SubIcon>
                                                 <div>
-                                                    <a>Transform</a>
-                                                    <a>Best Way</a>
+                                                    <p>Transform</p>
+                                                    <p>Best Way</p>
                                                 </div>
                                             </SubLink>
                                         </SubItem>
@@ -374,15 +375,15 @@ const Header = () => {
                                             <SubLink target="#" href="https://www.wikinemad.ir">
                                                 <SubIcon><FcMultipleCameras /></SubIcon>
                                                 <div>
-                                                    <a>Photogeraf</a>
-                                                    <a>Design</a>
+                                                    <p>Photogeraf</p>
+                                                    <p>Design</p>
                                                 </div>
                                             </SubLink>
                                             <SubLink target="#" href="https://www.wikinemad.ir">
                                                 <SubIcon><FcShipped /></SubIcon>
                                                 <div>
-                                                    <a>Transform</a>
-                                                    <a>Best Way</a>
+                                                    <p>Transform</p>
+                                                    <p>Best Way</p>
                                                 </div>
                                             </SubLink>
                                         </SubItem>
@@ -407,12 +408,12 @@ const Header = () => {
                         </Item>
                         <Item>
                             <Link target="#" href="https://www.wikinemad.ir">
-                                <a>Contact</a>
+                                <p>Contact</p>
                             </Link>
                         </Item>
                         <Item>
                             <Link target="#" href="https://www.wikinemad.ir">
-                                <a>Help</a>
+                                <p>Help</p>
                             </Link>
                         </Item>
                     </OverlayMenu>
