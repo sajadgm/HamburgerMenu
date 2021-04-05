@@ -53,22 +53,22 @@ const NavIcon = styled.button`
 const Menu = styled.ul`
   list-style: none;
   display: flex;
-  margin-left: auto;
   padding-right: 1rem;
-  
+  margin-right: 1rem;
 
   li:nth-child(2) {
     margin: 0px 20px;
   }
-
+  
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
 const Item = styled.li`
-    cursor: pointer;
+  cursor: pointer;
 `;
+
 const Link = styled.a`
   color: black;
   text-decoration: none;
@@ -85,41 +85,22 @@ const Line = styled.span`
   
   :nth-child(2) {
     width: ${props => (props.open ? "50%" : "70%")};
-    
   }
   :nth-child(3) {
     width: ${props => (props.open ? "25%" : "70%")};
   }
-  
 `;
-
-
-const Button1 = styled.button`
-  font-size: medium;
-  color: black;
-  width: 100%;
-  height: 25px;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  display: flex;
-  flex-direction:row;
-
-`;
-
 
 
 const ArrowIconSpan = styled.div`
-    margin-left: auto;
-    width : 25px;
-    height:25px;
-    svg{
-        width: 100%;
-        height: 100%;
-    }
-    `;
-
-
+  margin-left: auto;
+  width : 25px;
+  height:25px;  
+  svg{
+      width: 100%;
+      height: 100%;
+  }
+`;
 
 const Overlay = styled.div`
   position: absolute;
@@ -128,11 +109,7 @@ const Overlay = styled.div`
   background-color: white;
   top : 2rem;
   direction: ltr;
-  opacity: ${props => (props.open ? 1 : 0)};
-  /* transition: opacity 0.1s ease; */
-
-  
-  
+  opacity: ${props => (props.open ? 1 : 0)}; 
 
   @media (min-width: 769px) {
     display: none;
@@ -148,24 +125,14 @@ const OverlayMenu = styled.ul`
   background-color: white;
   left: 0;
 
-
-  /* opacity: ${props => (props.open ? 1 : 0)}; */
-  /* transition: opacity 0.8s ease-in; */
-
-  
-
   > li{
-    transition: margin 0.4s ease;
     display: flex;
     margin-left: ${props => (props.open ? "0" : "30%")};
     margin-top: 1rem;
+    transition: margin 0.4s ease;
     padding-bottom: 0.7rem;
     font-size: medium;
     border-bottom : 1px solid #ececec;
-
-    
-    
-
     
     :nth-child(2){
         transition: margin 0.6s ease;
@@ -178,29 +145,31 @@ const OverlayMenu = styled.ul`
         opacity: ${props => (props.open ? 1 : 0)};
         transition: opacity 0.5s ease-in;
     }
-    
   }
 `;
 
 
-//زیر منو
 
 
 
 
-const OverlaySub = styled.div`
+
+
+
+
+//sub menu
+const SubOverlay = styled.div`
   height: ${props => (props.open ? "50vh" : 0)};
   width: 100%;
   transition: height 0.5s ease;
   direction: ltr;
-  
 
   @media (min-width: 769px) {
     display: none;
   }
 `;
 
-const OverlaySubMenu = styled.ul`
+const SubOverlayMenu = styled.ul`
   list-style: none;
   position: absolute;
   width : 100%;
@@ -211,8 +180,6 @@ const OverlaySubMenu = styled.ul`
   display: flex;
   flex-direction: column;
   align-items:left;
-  
-  
 
   > li {
     font-size: 14px;
@@ -230,15 +197,12 @@ const OverlaySubMenu = styled.ul`
   a{
     padding-right: 0.5rem;
   }
-  
 `;
 
 const SubItem = styled.li`
     display: flex;
     flex-direction: row;
     margin-left: 0.7rem;
-    
-
 `;
 
 
@@ -254,29 +218,26 @@ const SubLink = styled.div`
   :hover{
     color:blue;
     transition: color 0.4s ease;
-    
   }
 
   div{
-      display:flex;
-      flex-direction:column;
-      position: relative;
-      :hover::after{
-        content:"";
-        color:blue;
-        position: absolute;
-        left:0;
-        bottom:0;
-        text-decoration: underline;
-        transform-origin : right bottom;
-        transform: scaleX(0);
-        transition: transform 0.4s linear;
-
-    
-    }
-      a{
-          margin-top:0.3rem
-      }
+    display:flex;
+    flex-direction:column;
+    position: relative;
+    :hover::after{
+    content:"";
+    color:blue;
+    position: absolute;
+    left:0;
+    bottom:0;
+    text-decoration: underline;
+    transform-origin : right bottom;
+    transform: scaleX(0);
+    transition: transform 0.4s linear;
+  }
+  a{
+    margin-top:0.3rem
+  }
   }
 `;
 
@@ -284,6 +245,7 @@ const SubLink = styled.div`
 const SubIcon = styled.span`
     width:30px;
     height:30px;
+
     svg{
         width:100%;
         height:100%;
@@ -292,10 +254,17 @@ const SubIcon = styled.span`
 
 
 
+
+
+
+
+
+
+
 const Header = () => {
+
     const [toggle, setToggle] = useState(false);
     const [subToggle, setSubToggle] = useState(false);
-
 
 
 
@@ -311,7 +280,7 @@ const Header = () => {
                     <Line open={toggle} />
                 </NavIcon>
 
-                <Menu>
+                <Menu open={toggle}>
                     <Item>
                         <Link target="#" href="https://www.wikinemad.ir">
                             Login
@@ -352,8 +321,8 @@ const Header = () => {
 
                                 <a>Github</a>
 
-                                <OverlaySub open={subToggle}>
-                                    <OverlaySubMenu open={subToggle}>
+                                <SubOverlay open={subToggle}>
+                                    <SubOverlayMenu open={subToggle}>
                                         <SubItem>
                                             <SubLink>
                                                 <SubIcon><FcGoogle /></SubIcon>
@@ -419,8 +388,8 @@ const Header = () => {
                                             </SubLink>
                                         </SubItem>
 
-                                    </OverlaySubMenu>
-                                </OverlaySub>
+                                    </SubOverlayMenu>
+                                </SubOverlay>
 
 
 
@@ -449,9 +418,6 @@ const Header = () => {
                         </Item>
                     </OverlayMenu>
                 </Overlay>
-
-
-
             </Nav>
         </Container>
     )
