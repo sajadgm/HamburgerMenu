@@ -66,6 +66,8 @@ const Menu = styled.ul`
 
 const Item = styled.li`
   cursor: pointer;
+  width: 100%;
+  float: left;
 `;
 
 const Link = styled.a`
